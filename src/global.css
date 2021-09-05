@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .w-s-10 {
+        word-spacing: 10px;
+    }
+    .text-success {
+        color: #009e0f;
+    }
+  }
+  
