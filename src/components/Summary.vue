@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="{ 'p-5 mb-10': isPreviewPage, 'p-10': !isPreviewPage }"
+    :class="{ 'p-5 mb-10': isPreviewPage, 'p-2 md:p-10': !isPreviewPage }"
     class="box-border border-gray rounded-md border-2 bg-gray-100"
   >
     <div class="text-xl mb-4">
@@ -34,14 +34,14 @@
       </div>
     </div>
     <div v-if="!isPreviewPage" class="mt-4 p-4 bg-white rounded-lg">
-      <div class="flex">
+      <div class="md:flex">
         <div class="flex-grow mr-2">
           <t-input v-model="cuponCode" placeholder="Kupon Kodu" />
         </div>
         <div>
           <t-button
             :disabled="cuponCode.length < 5"
-            class="bg-blue-900"
+            class="bg-blue-900 w-full mt-2 md:m-auto md:mt-0"
             text="Kodu Kullan"
             @click="applyCuponCode"
           />

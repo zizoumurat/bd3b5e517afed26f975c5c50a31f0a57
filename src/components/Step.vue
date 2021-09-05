@@ -1,5 +1,7 @@
 <template>
-  <div class="flex-grow text-center">
+  <div
+  :class="{'hidden md:block': !isActivePath}"
+   class="flex-grow text-center">
     <div class="relative">
       <div
         class="
@@ -21,11 +23,11 @@
         <i :class="['text-' + className, icon]" class="text-2xl"></i>
       </div>
       <div
-        v-if="showRightLine"
+        :class="{'visible': showRightLine, 'visible md:hidden':!showRightLine}"
         class="absolute top-1/2 right-0 h-px w-1/2 bg-gray-300"
       ></div>
       <div
-        v-if="showLeftLine"
+        :class="{'visible': showLeftLine, 'visible md:hidden':!showLeftLine}"
         class="absolute top-1/2 left-0 h-px w-1/2 bg-gray-300"
       ></div>
     </div>
@@ -76,6 +78,10 @@ export default {
     className() {
       return this.path === this.$route.path ? "black" : "gray-300";
     },
+
+    isActivePath () {
+      return this.path === this.$route.path;
+    }
   },
 };
 </script>

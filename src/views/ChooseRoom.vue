@@ -8,11 +8,14 @@
       </div>
       <div class="mt-2">
         <span class="font-semibold">Giriş Tarihi: </span>
-        <span>{{ reservation.checkIn }} - </span>
+        <span>{{ reservation.checkIn }}</span>
+        <div class="block mt-2 md:inline-block md:mt-0"><span class="hidden md:block md:mx-1">-</span></div>
         <span class="font-semibold">Çıkış Tarihi: </span>
-        <span>{{ reservation.checkOut }} - </span>
+        <span>{{ reservation.checkOut }}</span>
+        <div class="block mt-2 md:inline-block md:mt-0"><span class="hidden md:block md:mx-1">-</span></div>
         <span class="font-semibold">Yetişkin: </span>
-        <span>{{ reservation.adultCount }} - </span>
+        <span>{{ reservation.adultCount }}</span>
+        <span class="mx-1">-</span>
         <span class="font-semibold">Çocuk: </span>
         <span>{{ reservation.childCount }}</span>
       </div>
@@ -21,7 +24,7 @@
       <span class="font-semibold text-lg mb-2 block">Oda Tipi Seçimi</span>
       <hr />
     </div>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
       <room-detail
         v-for="(roomType, index) in roomTypes"
         :id="roomType.id"
@@ -39,7 +42,7 @@
       <span class="font-semibold text-lg mb-2 block">Manzara Seçimi</span>
       <hr />
     </div>
-    <div class="grid grid-cols-3 gap-4">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
       <room-detail
         v-for="(roomScenic, index) in roomScenics"
         :id="roomScenic.id"

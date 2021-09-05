@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto">
     <Header />
-    <div class="w-3/4 mx-auto mt-10">
+    <div class="w-full px-4 mx-auto mt-10 md:w-3/4 md:px-0">
       <router-view />
     </div>
   </div>
@@ -16,10 +16,4 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-  .content {
-    width: 600px;
-  }
-</style>
 

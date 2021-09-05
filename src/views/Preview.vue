@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div
-      class="box-borde border-gray rounded-md border-2 p-10 mb-4 text-center"
+      class="box-border border-gray rounded-md border-2 p-4 md:p-10 mb-4 text-center"
     >
-      <div class="max-w-2xl mx-auto">
+      <div class="md:max-w-2xl mx-auto max-w-none">
         <div class="text-success text-8xl">
           <i class="far fa-calendar-check"></i>
         </div>
@@ -19,7 +19,7 @@
             kullanabilirsiniz.
           </span>
         </div>
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
             <t-button
               class="bg-blue-900 w-full"

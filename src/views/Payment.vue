@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <Steps />
-    <div class="flex">
-      <div class="w-3/5 box-border border-gray rounded-md border-2 p-10 mr-5">
+    <div class="flex flex-col-reverse md:flex-row">
+      <div class="w-full p-2 box-border border-gray rounded-md border-2 md:p-10 md:mr-5 md:w-3/5">
         <div class="rounded-xl relative text-black bg-gray-100">
           <div class="px-8 py-10">
             <div class="flex justify-between text-xl">
@@ -18,7 +18,7 @@
               <i class="fas fa-barcode text-6xl"></i>
             </div>
             <div>
-              <p class="font-medium text-4xl w-s-10">{{ showCardNumber }}</p>
+              <p class="font-medium text-2xl mdtext-4xl w-s-10">{{ showCardNumber }}</p>
             </div>
             <div class="my-4">
               <div class="flex justify-between">
@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-        <div class="border-gray-500 border-2 px-8 pt-10 pb-20 mt-8 relative">
+        <div class="border-gray-500 border-2 px-8 pt-10 pb-10 mt:pb-20 mt-8 relative">
           <span class="absolute left-3 -top-3.5 bg-white px-3 font-bold"
             >Kredi Kartı Bilgileri</span
           >
@@ -79,10 +79,11 @@
               maxlength="16"
             />
           </div>
-          <div class="flex justify-between">
+          <div class="md:flex md:justify-between">
             <div>
               <span class="block mb-1">Kart Son Kullanma Tarihi</span>
-              <div class="inline-block w-32 mr-2">
+              <div class="grid grid-cols-2 gap-2">
+              <div class="inline-block w-32">
                 <t-select
                   v-model="creditCard.month"
                   placeholder="Ay"
@@ -96,8 +97,9 @@
                   :options="yearOptions()"
                 />
               </div>
+              </div>
             </div>
-            <div>
+            <div class="mt-6 md:mt-0">
               <span class="block">CVV</span>
               <t-input
                 v-model="creditCard.cvv"
@@ -109,7 +111,7 @@
           </div>
         </div>
       </div>
-      <div class="w-2/5">
+      <div class="w-full md:w-2/5">
         <Summary />
       </div>
     </div>

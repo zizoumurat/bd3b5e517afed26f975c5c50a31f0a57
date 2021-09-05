@@ -11,7 +11,7 @@
       >
       </t-rich-select>
       <div class="grid grid-cols-1 md:grid-cols-4 mt-4 border-black border-2">
-        <div class="p-5 border-r-2 border-black">
+        <div class="p-5 md:border-r-2 border-black">
           <span class="mb-2 block text-black font-semibold">Giriş Tarihi</span>
           <t-datepicker
             v-model="reservation.checkIn"
@@ -25,7 +25,7 @@
             user-format="L"
           />
         </div>
-        <div class="p-5 border-r-2 border-black">
+        <div class="p-5 border-r-2 md:border-black">
           <span class="mb-2 block text-black font-semibold">Çıkış Tarihi</span>
           <t-datepicker
             v-model="reservation.checkOut"
@@ -38,7 +38,7 @@
             user-format="L"
           />
         </div>
-        <div class="p-5 border-r-2 border-black">
+        <div class="p-5 border-r-2 md:border-black">
           <span class="mb-2 block text-black font-semibold"
             >Yetişkin Sayısı</span
           >
